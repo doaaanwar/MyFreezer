@@ -142,7 +142,7 @@ $(document).ready(function(){
 
     function populateDB(tx) {
         $('#busy').show();
-        //tx.executeSql('DROP TABLE IF EXISTS item');
+        tx.executeSql('DROP TABLE IF EXISTS item');
         var sql = 
             "CREATE TABLE IF NOT EXISTS item ( "+
             "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
