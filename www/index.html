@@ -4,18 +4,21 @@
         <title>Freezer Items</title>
         <meta name="viewport" content="width=device-width,initial-scale=1"/>
         <link rel="stylesheet" href="css/styles.css" />
-    </head>
-
-    <body>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+     
         
+    </head>
+     
+    <body>
+     <div data-role="page" id="pagelist">  
 	<div id="header" class="header">
          <a href="alarm.html" class="nav">Alarm</a>
          <a href="createNew.html" class="navRight">Add New</a>
-		<h1>Freezer Items</h1>
+		<h1>My Freezer</h1>
         
 	</div>
 	<div id="header2">
-		<h2>Item List</h2>
+		<h2>My Freezer</h2>
        
 	</div>
 	
@@ -24,12 +27,20 @@
 	</div>
 
 	<div id="busy"/>Loading...</div>
-
+    </div>
 	<script src="js/phonegap.js"></script>
-    <script src="js/jquery.js"></script>
+    
+    
+     <!-- Include the jQuery library -->
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+<!-- Include the jQuery Mobile library -->
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="js/iscroll.js"></script>
-    <script src="js/itemlist.js"></script>
+    <script src="js/index.js"></script>
+
+
 
     </body>
-
+    
 </html>

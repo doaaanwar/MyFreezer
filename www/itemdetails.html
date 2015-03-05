@@ -4,13 +4,15 @@
         <title>Freezer Directory</title>
         <meta name="viewport" content="width=device-width,initial-scale=1"/>
         <link rel="stylesheet" href="css/styles.css" />
+         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+         
     </head>
     
     <body>
-        
+    <div data-role="page" id="detailPage">    
 	<div id="header" class="header">
 		<a href="index.html" class="nav">Home</a>
-        <a href="editItem.html" class="navRight">Update</a>
+       
 		<h1>Freezer Directory</h1>
        
 	</div>
@@ -23,20 +25,35 @@
 	  		<div id="itemDetails">
  		  		<img id="itemPic"/>
 	       		<h3 id="fullName"></h3>
-	       		<p id="itemTitle"></p>
-	       		<p id="city"></p>
+                <p id="packWeight"></p>
+                <p id="city"></p>
+	       		
+	       		
+                
+                <button id="minusPack" class="ui-btn ui-icon-minus ui-btn-icon-left">Use One Pack</button>
+                <button id="plusPack" class="ui-btn ui-icon-plus ui-btn-icon-left">Add One Pack</button>
+                <!--<button class="ui-btn">Update the pack weight</button>-->
+               
 	  		</div> 
 	    	<ul id="actionList"></ul>
 	  	</div>
 	</div>
 
 	<div id="busy"/>Loading...</div>
+    </div>
 
 	<script src="js/phonegap.js"></script>
-	<script src="js/jquery.js"></script>
-    <script src="js/iscroll.js"></script>
-    <script src="js/itemdetails.js"></script>
+  
+     <!-- Include the jQuery library -->
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 
+<!-- Include the jQuery Mobile library -->
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+ 
+    <script src="js/iscroll.js"></script>
+    <script src="js/index.js"></script>
+    
+    
     </body>
 
 </html>

@@ -4,10 +4,12 @@
         <title>Freezer Directory</title>
         <meta name="viewport" content="width=device-width,initial-scale=1"/>
         <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        
     </head>
     
     <body>
-        
+    
 	<div id="header" class="header">
 		<a href="index.html" class="nav">Home</a>
         
@@ -24,51 +26,28 @@
             <div>
 
                 <div id="itemDetails">
-                    <table>
-                        <tr>
-                            <td>
-                                Item
-                            </td>
-                            <td>
-                                 <input  type="text" id="itemName" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Qantity
-                            </td>
-                            <td>
-                                <input id="quantity" type="text" value="0"/>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Number Of Pack
-                            </td>
-                            <td>
-                                <input id="numberOfPackage"  type="text" value="0" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Total Quantity
-                            </td>
-                            <td>
-                                <input id="totalQuantity" type="text" value="0"/>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Picture
-                            </td>
-                            <td>
-                                <input type="file" id="picture"/>
-                            </td>
-                        </tr>
-                    </table>
+                    <div class="ui-field-contain">
+                         <label for="itemName">Item</label>
+                         <input type="text" name="itemName" id="itemName">
+   
+                    </div>
+                    <div class="ui-field-contain">
+                         <label for="weight">Weight (lb)</label>
+                         <input type="text" name="weight" id="weight">
+                    </div>
+                    <div class="ui-field-contain">
+                         <label for="numberOfPackage">Number Of Pack</label>
+                         <input type="text" name="numberOfPackage" id="numberOfPackage" value="0">
+                    </div>
+                     <div class="ui-field-contain">
+                         <label for="totalWeight">Total Weight (lb)</label>
+                         <input type="text" name="totalWeight" id="totalWeight" value="0">
+                    </div>
+                     
+                   
                 </div> 
                 <div align="center">
-                    <input id="createBtn" type="button" value="Create" />
+                     <button id="createBtn">Create</button>
                 </div>
                
             </div>
@@ -76,12 +55,20 @@
 	</div>
 
 	
-
+       
 	<script src="js/phonegap.js"></script>
-	<script src="js/jquery.js"></script>
-    <script src="js/iscroll.js"></script>
-    <script src="js/createNew.js"></script>
+    
+	
+    
+     <!-- Include the jQuery library -->
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 
+<!-- Include the jQuery Mobile library -->
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/iscroll.js"></script>
+    <script src="js/index.js"></script>
+   
+    
     </body>
 
 </html>
