@@ -23,7 +23,7 @@ $(document).ready(function(){
     function getZeroList()
     {
         console.log("opening database");
-        db = window.openDatabase("FreezerDirectoryDB", "1.0", "PhoneGap Demo", 200000);
+        db = window.openDatabase("FreezerDirectoryDB", "1.0", "PhoneGap Demo", 2000);
         console.log("database opened");
         db.transaction(getZeroItems, transaction_error);
     }
