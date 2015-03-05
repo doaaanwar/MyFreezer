@@ -23,7 +23,7 @@ $(document).ready(function(){
     function getZeroList()
     {
         console.log("opening database");
-        db = window.openDatabase("FreezerDirectoryDB", "1.0", "PhoneGap Demo", 200000);
+        db = window.openDatabase("FreezerDirectoryDB", "1.0", "PhoneGap Demo", 2000);
         console.log("database opened");
         db.transaction(getZeroItems, transaction_error);
     }
@@ -31,7 +31,7 @@ $(document).ready(function(){
     function getList()
     {
          console.log("opening database");
-        db = window.openDatabase("FreezerDirectoryDB", "1.0", "PhoneGap Demo", 200000);
+        db = window.openDatabase("FreezerDirectoryDB", "1.0", "PhoneGap Demo", 2000);
         console.log("database opened");
         db.transaction(getItems, transaction_error);
     }
@@ -40,13 +40,13 @@ $(document).ready(function(){
     function getDetails()
     {
         console.log("opening database");
-        db = window.openDatabase("FreezerDirectoryDB", "1.0", "PhoneGap Demo", 200000);
+        db = window.openDatabase("FreezerDirectoryDB", "1.0", "PhoneGap Demo", 2000);
         console.log("database opened");
         db.transaction(getItem, transaction_error);
     }
 
     function onDeviceReady() {
-        db = window.openDatabase("FreezerDirectoryDB", "1.0", "PhoneGap Demo", 200000);
+        db = window.openDatabase("FreezerDirectoryDB", "1.0", "PhoneGap Demo", 2000);
         if (dbCreated)
             db.transaction(getItems, transaction_error);
         else
@@ -177,7 +177,7 @@ $(document).ready(function(){
 
     $("#createBtn").click(function(){
        console.log("opening database");
-        db = window.openDatabase("FreezerDirectoryDB", "1.0", "PhoneGap Demo", 200000);
+        db = window.openDatabase("FreezerDirectoryDB", "1.0", "PhoneGap Demo", 2000);
         console.log("database opened");
         db.transaction(createItem, transaction_error);
 
@@ -238,7 +238,7 @@ $(document).ready(function(){
     function update()
     {
         console.log("opening database");
-        db = window.openDatabase("FreezerDirectoryDB", "1.0", "PhoneGap Demo", 200000);
+        db = window.openDatabase("FreezerDirectoryDB", "1.0", "PhoneGap Demo", 2000);
         console.log("database opened");
         db.transaction(updateItem, transaction_error);
     }
