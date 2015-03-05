@@ -89,7 +89,7 @@ $(document).ready(function(){
         setTimeout(function(){
             scroll.refresh();
         });
-        db = null;
+        //db = null;
     }
 
     function getUrlVars() {
@@ -136,7 +136,7 @@ $(document).ready(function(){
         setTimeout(function(){
             scroll.refresh();
         },100);
-        db = null;
+        //db = null;
     }
 
     function populateDB(tx) {
@@ -274,7 +274,7 @@ $(document).ready(function(){
         setTimeout(function(){
             scroll.refresh();
         },100);
-        db = null;
+       // db = null;
     }
 
     
