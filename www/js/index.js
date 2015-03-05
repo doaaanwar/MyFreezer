@@ -5,6 +5,7 @@ $(document).ready(function(){
     var id ;       
     var dbCreated = false;
     var item;
+    var db = window.openDatabase("FreezerDirectoryDB", "1.0", "PhoneGap Demo", 2000);
     document.addEventListener("deviceready",onDeviceReady,false);
     //jQuery(document).on("pagebeforecreate","#detailPage",jQuery.proxy(this.getItem, this))
    
@@ -17,36 +18,36 @@ $(document).ready(function(){
     jQuery(document).on("click","#plusPack",plusOnePack);
 
     var scroll = new iScroll('wrapper', { vScrollbar: false, hScrollbar:false, hScroll: false });
-    var db ;
+    
     
     
     function getZeroList()
     {
-        console.log("opening database");
-        db = window.openDatabase("FreezerDirectoryDB", "1.0", "PhoneGap Demo", 2000);
-        console.log("database opened");
+       // console.log("opening database");
+        //db = window.openDatabase("FreezerDirectoryDB", "1.0", "PhoneGap Demo", 2000);
+        //console.log("database opened");
         db.transaction(getZeroItems, transaction_error);
     }
     
     function getList()
     {
-         console.log("opening database");
-        db = window.openDatabase("FreezerDirectoryDB", "1.0", "PhoneGap Demo", 2000);
-        console.log("database opened");
+       //  console.log("opening database");
+       // db = window.openDatabase("FreezerDirectoryDB", "1.0", "PhoneGap Demo", 2000);
+       // console.log("database opened");
         db.transaction(getItems, transaction_error);
     }
     
     
     function getDetails()
     {
-        console.log("opening database");
-        db = window.openDatabase("FreezerDirectoryDB", "1.0", "PhoneGap Demo", 2000);
-        console.log("database opened");
+        //console.log("opening database");
+       // db = window.openDatabase("FreezerDirectoryDB", "1.0", "PhoneGap Demo", 2000);
+       // console.log("database opened");
         db.transaction(getItem, transaction_error);
     }
 
     function onDeviceReady() {
-        db = window.openDatabase("FreezerDirectoryDB", "1.0", "PhoneGap Demo", 2000);
+        //db = 
         if (dbCreated)
             db.transaction(getItems, transaction_error);
         else
@@ -176,9 +177,9 @@ $(document).ready(function(){
 
 
     $("#createBtn").click(function(){
-       console.log("opening database");
-        db = window.openDatabase("FreezerDirectoryDB", "1.0", "PhoneGap Demo", 2000);
-        console.log("database opened");
+       //console.log("opening database");
+       // db = window.openDatabase("FreezerDirectoryDB", "1.0", "PhoneGap Demo", 2000);
+       // console.log("database opened");
         db.transaction(createItem, transaction_error);
 
 
@@ -237,9 +238,9 @@ $(document).ready(function(){
     
     function update()
     {
-        console.log("opening database");
-        db = window.openDatabase("FreezerDirectoryDB", "1.0", "PhoneGap Demo", 2000);
-        console.log("database opened");
+        //console.log("opening database");
+       // db = window.openDatabase("FreezerDirectoryDB", "1.0", "PhoneGap Demo", 2000);
+       // console.log("database opened");
         db.transaction(updateItem, transaction_error);
     }
     
