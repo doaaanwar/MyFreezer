@@ -142,7 +142,7 @@ $(document).ready(function(){
 
     function populateDB(tx) {
         $('#busy').show();
-        //tx.executeSql('DROP TABLE IF EXISTS item');
+        tx.executeSql('DROP TABLE IF EXISTS item');
         var sql = 
             "CREATE TABLE IF NOT EXISTS item ( "+
             "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
@@ -152,9 +152,9 @@ $(document).ready(function(){
             "totalWeight FLOAT, " +
             "picture VARCHAR(200))";
         tx.executeSql(sql);
-        //sql = "INSERT INTO item (id,itemName,weight,totalWeight,numOfPackage,picture) VALUES (0,'test',200,0,0,'null')";
+        sql = "INSERT INTO item (id,itemName,weight,totalWeight,numOfPackage,picture) VALUES (0,'test',200,0,0,'null')";
 
-        //tx.executeSql(sql);
+        tx.executeSql(sql);
     }
 
 
