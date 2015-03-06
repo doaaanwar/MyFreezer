@@ -47,7 +47,7 @@ $(document).ready(function(){
     }
 
     function onDeviceReady() {
-        db =  = window.openDatabase("FreezerDirectoryDB", "1.0", "PhoneGap Demo", 200000);
+        db = window.openDatabase("FreezerDirectoryDB", "1.0", "PhoneGap Demo", 200000);
         if (dbCreated)
             db.transaction(getItems, transaction_error);
         else
