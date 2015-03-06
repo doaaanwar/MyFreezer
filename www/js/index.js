@@ -32,7 +32,7 @@ $(document).ready(function(){
     function getList()
     {
         console.log("opening database");
-        db = window.openDatabase("/data/data/" + context.getApplicationContext().getPackageName() + "/databases/FreezerDirectoryDB", "1.0", "PhoneGap Demo", 200000);
+        db = window.openDatabase("FreezerDirectoryDB", "1.0", "PhoneGap Demo", 200000);
         console.log("database opened");
         db.transaction(getItems, transaction_error);
     }
@@ -41,13 +41,13 @@ $(document).ready(function(){
     function getDetails()
     {
         console.log("opening database");
-        db = window.openDatabase("/data/data/" + context.getApplicationContext().getPackageName() + "/databases/FreezerDirectoryDB", "1.0", "PhoneGap Demo", 200000);
+        db = window.openDatabase("FreezerDirectoryDB", "1.0", "PhoneGap Demo", 200000);
         console.log("database opened");
         db.transaction(getItem, transaction_error);
     }
 
     function onDeviceReady() {
-        db = window.openDatabase("/data/data/" + context.getApplicationContext().getPackageName() + "/databases/FreezerDirectoryDB", "1.0", "PhoneGap Demo", 200000);
+        db = window.openDatabase("FreezerDirectoryDB", "1.0", "PhoneGap Demo", 200000);
         if (dbCreated)
             db.transaction(getItems, transaction_error);
         else
@@ -181,7 +181,7 @@ $(document).ready(function(){
 
     $("#createBtn").click(function(){
         console.log("opening database");
-        db = window.openDatabase("/data/data/" + context.getApplicationContext().getPackageName() + "/databases/FreezerDirectoryDB", "1.0", "PhoneGap Demo", 200000);
+        db = window.openDatabase("FreezerDirectoryDB", "1.0", "PhoneGap Demo", 200000);
         console.log("database opened");
         db.transaction(createItem, transaction_error);
 
